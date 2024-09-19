@@ -1,0 +1,26 @@
+1. What is HTML? What does it do?
+HTML is the standard language for creating webpages. It provides the structure for web content by defining elements such as headings, paragraphs, links, and images.
+
+2. What is CSS? What does it do?
+CSS is used to style and format the layout of a webpage. It controls the visual presentation of HTML elements, including colors, fonts, and spacing.
+
+3. Access the Fordham website and describe how the webpage uses structure to convey meaning and navigation options to the user.
+When accessing Fordham’s website, you can notice that it uses a clean structure. 
+The navigation bar at the top offers direct links to important sections like Admissions, Academics, and Research. 
+The homepage uses sections to guide the user through key areas like news, events, and services. 
+Clear headings and buttons make it easy to navigate.
+
+4. What is an HTML element? Tag? Attribute?
+An HTML element is a piece of content in an HTML document that consists of a start tag, content, and an end tag. 
+A tag is used to define an element, and an attribute provides additional information about an element.
+
+5. What are the parts of a CSS rule?
+A CSS rule consists of two main parts: selector and declaration.
+
+6. Explain how CSS rules cascade.
+CSS rules cascade by following a hierarchy of specificity and order. If multiple rules apply to the same element, the one with higher specificity or that appears later in the code will override the others.
+
+7.<img src="../images/pinecone.jpg" alt="Pinecone Image">
+
+8.What is the default behavior when submitting a HTML form?
+when submitting a HTML form, the default behavior is to submit to a URL, and the page is reloaded with the response.

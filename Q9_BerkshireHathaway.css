@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #003399;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #003399; /* Berkshire Hathaway's brand blue */
+    font-weight: bold;
+}
+header p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+.container {
+    display: flex;
+    justify-content: space-between; /* Ensure columns are spaced evenly */
+    max-width: 1000px; /* Constrain the width */
+    margin: 20px auto; /* Center the layout */
+    padding: 0 20px;
+}
+.column {
+    width: 45%; /* Each column takes roughly half the width */
+}
+.column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.column ul li {
+    margin: 10px 0;
+    line-height: 1.8;
+}
+.column ul li a {
+    color: #800080; /* Matching blue link color */
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    text-decoration: underline;
+}
+
+.column ul li a span {
+    font-size: 12px;
+    color: white;
+    display: block;
+    margin-left: 10px; /* Adds space for the updated text */
+}
+
+/* GEICO Ad Section */
+.geico-ad {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+.geico-ad p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #003399;
+}
+.geico-ad a {
+    color: #003399;
+    text-decoration: underline;
+}
+
+/* Comment Notice Section */
+.comment-notice {
+    text-align: center;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #003399;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    font-size: 12px;
+    background-color:white;
+    border-top: 1px solid #ccc;
+}
+footer a {
+    color: #003399;
+    text-decoration: none;
+    text-decoration: underline;
+}
