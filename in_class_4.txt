@@ -1,0 +1,8 @@
+1.Interpreted
+2.Dynamic
+3.Prototype-based
+4.let
+5.Scope
+6.const
+7.callback
+8.objects
