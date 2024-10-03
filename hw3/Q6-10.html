@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3 - CISC 3300</title>
+</head>
+<body>
+    <script>
+        // Cats array from question 6
+        const cats = [
+            { name: 'Charlie', adoptionStatus: 'available' },
+            { name: 'Lily', adoptionStatus: 'adopted' },
+            { name: 'Bella', adoptionStatus: 'available' }
+        ];
+
+        // Question 6a: Add available cats to result array
+        const result = [];
+        cats.forEach(cat => {
+            if (cat.adoptionStatus === 'available') {
+                result.push(cat.name);
+            }
+        });
+        console.log('Available cats:', result);
+
+        // Question 6b: Create sentence about adopted cats using join
+        const sentence = `I have adopted ${result.join(' and ')}`;
+        console.log(sentence);
+
+        // Question 7: Use ternary operator to set value using Math.random()
+        const randomNumber = Math.random() * 10;
+        const randomValue = randomNumber > 5 ? 'greater than five!' : 'less than five!';
+        console.log('Random Value:', randomValue);
+
+        // Question 8: Loop through the cat object and console.log property values
+        const catObject = {
+            name: 'Charlie',
+            age: 2,
+            adoptionStatus: 'available'
+        };
+        for (const key in catObject) {
+            if (catObject.hasOwnProperty(key)) {
+                console.log(`${key}: ${catObject[key]}`);
+            }
+        }
+
+        // Question 9: Two if statements with correct comparison operators
+        const number = 1;
+        const stringNumber = '1';
+        if (number == stringNumber) {
+            console.log('1 and "1" are equal with =='); // True, == allows type coercion
+        }
+        if (number !== stringNumber) {
+            console.log('1 and "1" are not equal with ==='); // True, === checks for strict equality
+        }
+
+        // Question 10: Create a new array using the map function
+        const cuteCats = cats.map(cat => `${cat.name} is cute!`);
+        console.log('Cute cats:', cuteCats);
+
+    </script>
+</body>
+</html>

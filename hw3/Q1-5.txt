@@ -1,0 +1,29 @@
+1. 
+What is JavaScript?
+JavaScript is a lightweight programming language commonly used by web developers to add dynamic interactions to web pages, applications, servers, and even games.
+
+Interpreted languages: The code is executed line by line at runtime by an interpreter. They don't require compilation before execution.
+Compiled languages: The code is transformed into machine code by a compiler before it can be executed.
+
+2. 
+Dynamically typed vs statically typed languages:
+Dynamically typed languages: type checking is performed at runtime, means that the type of a variable is allowed to change over its lifetime.
+Statically typed languages: recognizes different data types (numbers, strings, etc.), but doesn't use them too strictly, trying to convert data when it seems reasonable
+
+Strongly vs weakly typed languages:
+Strongly typed: Variables are restricted to one type, and implicit conversions are limited (e.g., Python, Java).
+Weakly typed: Variables can change types easily, and implicit type conversions are common (e.g., JavaScript).
+
+3.
+var: old school, global+function scoped, redeclarable   
+let: block scoped, redeclarable
+const: block scoped, not declarable 
+
+4.
+Anonymous function: A function without a name.
+First-class functions: if functions in that language are treated like other variables
+Higher-order functions: function that returns a function or takes other functions as arguments is called a.
+Callback functions: passed as an argument to another function to be called later
+
+5. 
+const cat = { name: 'Charlie', age: 2 };
