@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 4</title>
+    <script>
+        // Question 6
+        function changeColor() {
+            let listItems = document.querySelectorAll('ul#main-list li');
+            listItems.forEach(item => item.style.color = 'blue');
+        }
+
+        // Question 7
+        const cats = [
+            { name: 'Charlie', adoptionStatus: 'available' },
+            { name: 'Lily', adoptionStatus: 'not-available' },
+            { name: 'Coco', adoptionStatus: 'available' },
+            { name: 'Oreo', adoptionStatus: 'not-available' },
+            { name: 'Luna', adoptionStatus: 'available' },
+            { name: 'Milo', adoptionStatus: 'available' },
+            { name: 'Lola', adoptionStatus: 'not-available' },
+            { name: 'Leo', adoptionStatus: 'available' },
+            { name: 'Willow', adoptionStatus: 'available' },
+            { name: 'Bella', adoptionStatus: 'not-available' },
+            { name: 'Max', adoptionStatus: 'available' },
+            { name: 'Cleo', adoptionStatus: 'available' },
+            { name: 'Lucy', adoptionStatus: 'not-available' },
+            { name: 'Daisy', adoptionStatus: 'available' }
+            ];
+
+            window.onload = function () {
+            const catsList = document.getElementById('cats-list');
+            cats.forEach(cat => {
+                let li = document.createElement('li');
+                li.textContent = `${cat.name} (${cat.adoptionStatus})`;
+                catsList.appendChild(li);
+            });
+        };
+
+        // Question 8, 9, 10:
+        function handleSubmit(event) {
+            event.preventDefault();
+            const inputField = document.getElementById('input-field');
+            const message = document.getElementById('message');
+            
+            // Check if input is empty
+            if (inputField.value.trim() === '') {
+                message.textContent = 'Please Provide a Value';
+                message.style.backgroundColor = 'red';
+            } else {
+                message.textContent = 'Success';
+                message.style.backgroundColor = 'green';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <ul id="main-list">
+        <li onclick="changeColor()">Item 1</li>
+        <li onclick="changeColor()">Item 2</li>
+        <li onclick="changeColor()">Item 3</li>
+    </ul>
+
+    <ul id="cats-list"></ul>
+
+    <form onsubmit="handleSubmit(event)">
+        <label for="input-field">Input:</label>
+        <input type="text" id="input-field">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="message"></div>
+
+</body>
+</html>

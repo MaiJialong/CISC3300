@@ -1,0 +1,17 @@
+1. What is the DOM? What is meant by the DOM tree?
+The Document Object Model (DOM) specifies how browsers should create a model of an HTML page and how JavaScript can access and update the contents of a web page while it is in the browser window.
+The DOM tree is the model when loading a web page. It is stored in bower's memory and consists of four main types of nodes(documetn, element, attribute, text).
+
+2. What is an XSS attack? How do they work? How can you guard against them?
+XSS is Cross-Site Scripting and attacks occur when an attacker injects malicious scripts into web pages viewed by others.
+cattacks occur when an attacker injects malicious scripts into web pages viewed by others.
+To guard against XSS, need to be very careful with what content you treat as html.
+it should very rarely have the option to show input that came from a user at all.
+if it must there are options to validate that input, strip it of potential malicious intent by removing tags, escaping characters, etc
+
+What is an event in JavaScript?
+An event in JavaScript is an action or occurrence that happens in the browser, such as a user clicking a button, typing in a text field, or the page finishing loading. 
+
+5. What is jQuery? Why use it? How do we load jQuery onto a page?
+jQuery is a fast, small, and feature-rich JavaScript library that simplifies tasks like HTML document traversal, event handling, and animation. It is used to write less code and handle browser compatibility issues. To load jQuery onto a page, you can include a <script> tag with a reference to the jQuery CDN.
+
