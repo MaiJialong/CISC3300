@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Pasta Carbonara",
+        "description": "A classic Italian pasta dish with eggs, cheese, pancetta, and pepper."
+    },
+    {
+        "id": 2,
+        "title": "Chicken Curry",
+        "description": "A flavorful curry dish made with chicken, spices, and coconut milk."
+    },
+    {
+        "id": 3,
+        "title": "Beef Stroganoff",
+        "description": "A creamy beef dish served with mushrooms and onions."
+    }
+]
