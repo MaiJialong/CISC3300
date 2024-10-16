@@ -1,0 +1,8 @@
+1. .htaccess
+2. <?php
+3.$
+4.the structure of arrays and objects
+5. arrays
+6. double quotes""
+7. include (or require)
+8. data type
