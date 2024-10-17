@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes List</title>
+    <style>
+        .recipe {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .recipe-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .recipe-description {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h1>Recipes</h1>
+    <div id="recipes"></div>
+
+    <h2>Add a New Recipe</h2>
+    <form id="recipe-form">
+        <input type="text" id="title" placeholder="Title" required /><br/>
+        <textarea id="description" placeholder="Description" required></textarea><br/>
+        <button type="submit">Add Recipe</button>
+    </form>
+
+    <script>
+        // Load and display the recipes
+        function loadRecipes() {
+            $.get("http://localhost:3000/recipes", function(data) {
+                $('#recipes').empty();  // Clear the existing recipes
+                data.forEach(function(recipe) {
+                    $('#recipes').append(`
+                        <div class="recipe">
+                            <div class="recipe-title">${recipe.title}</div>
+                            <div class="recipe-description">${recipe.description}</div>
+                        </div>
+                    `);
+                });
+            });
+        }
+
+        $(document).ready(function() {
+            loadRecipes();
+
+            // Add a new recipe
+            $('#recipe-form').submit(function(event) {
+                event.preventDefault();
+                
+                const newRecipe = {
+                    title: $('#title').val(),
+                    description: $('#description').val()
+                };
+
+                $.ajax({
+                    url: "http://localhost:3000/recipes",
+                    method: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(newRecipe),
+                    success: function() {
+                        loadRecipes();  // Reload the recipes after adding a new one
+                        $('#title').val('');
+                        $('#description').val('');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
