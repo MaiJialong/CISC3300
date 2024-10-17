@@ -1,3 +1,3 @@
 <?php
-echo '<h1>project 2</h1>';
+echo '<h1>project 1</h1>';
 ?>
