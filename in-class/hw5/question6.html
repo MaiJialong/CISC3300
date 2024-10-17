@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Weather</title>
+    <style>
+        .weather-info { margin: 10px 0; }
+    </style>
+    <script>
+        async function getNYCWeather() {
+            const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=40.7128&longitude=-74.0060&current_weather=true&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m');
+            const data = await response.json();
+
+            // Display current temperature
+            document.getElementById('current-temp').textContent = `Current Temperature: ${data.current_weather.temperature_2m}°C`;
+            
+            // Display current wind speed
+            document.getElementById('current-wind').textContent = `Current Wind Speed: ${data.current_weather.wind_speed_10m} m/s`;
+
+            // Display current relative humidity
+            document.getElementById('current-humidity').textContent = `Current Humidity: ${data.current_weather.relative_humidity_2m}%`;
+
+            // Display the hourly temperature, wind speed, and humidity for the first hour
+            document.getElementById('hourly-temp').textContent = `Hourly Temperature: ${data.hourly.temperature_2m[0]}°C at ${data.hourly.time[0]}`;
+            document.getElementById('hourly-wind').textContent = `Hourly Wind Speed: ${data.hourly.wind_speed_10m[0]} m/s`;
+            document.getElementById('hourly-humidity').textContent = `Hourly Humidity: ${data.hourly.relative_humidity_2m[0]}%`;
+        }
+    </script>
+</head>
+<body onload="getNYCWeather()">
+    <h1>NYC Weather (2m above ground)</h1>
+
+    <div class="weather-info">
+        <p id="current-temp">Loading current temperature...</p>
+        <p id="current-wind">Loading current wind speed...</p>
+        <p id="current-humidity">Loading current humidity...</p>
+    </div>
+
+    <div class="weather-info">
+        <h2>Hourly Forecast (First Hour)</h2>
+        <p id="hourly-temp">Loading hourly temperature...</p>
+        <p id="hourly-wind">Loading hourly wind speed...</p>
+        <p id="hourly-humidity">Loading hourly humidity...</p>
+    </div>
+</body>
+</html>

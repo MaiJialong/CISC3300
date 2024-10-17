@@ -1,0 +1,39 @@
+1. What is HTTP? What are the different HTTP request methods and how do they differ?
+HTTP (Hypertext Transfer Protocol) is the foundation of any data exchange on the Web. It is a protocol used for transmitting hypertext between a client and server.\
+HTTP request methods:
+GET: Requests data from a specified resource.
+POST: Submits data to be processed to a specified resource.
+PUT: Updates a current resource with new data.
+DELETE: Deletes a specified resource.
+PATCH: Partially modifies a resource.
+
+2. What is an API? What is JSON?
+API (Application Programming Interface) is a set of rules and protocols for building and interacting with software applications.
+JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write, and for machines to parse and generate.
+
+3. What is AJAX? What is meant by asynchronous code?
+AJAX (Asynchronous JavaScript and XML) allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page without reloading the entire page.
+Asynchronous code means code that does not run in the sequence in which it is written. Instead, tasks like fetching data can be performed in the background without interrupting the main program flow.
+
+4. What is REST and what are resources? If my application had a concept called posts and was designed in a RESTful way, what would the URI and HTTP request method be to:
+REST (Representational State Transfer) is an architectural style for designing networked applications. Resources in REST are entities or objects in a system, which can be manipulated via HTTP requests.
+
+a. retrieve multiple posts
+URI: /posts
+HTTP method: GET
+
+b. retrieve a single post
+URI: /posts/{id}
+HTTP method: GET
+
+c. save a post
+URI: /posts
+HTTP method: POST
+
+d. update a post
+URI: /posts/{id}
+HTTP method: PUT or PATCH
+
+5. Define hoisting and closures in JS.
+Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+Closures are functions that reference variables from outside their scope. They remember the environment in which they were created.
