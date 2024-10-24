@@ -1,0 +1,34 @@
+1. What is PHP? What do server-side languages do in web development?
+PHP is a widely-used open-source server-side scripting language that is especially suited for web development. It runs on the server, generating dynamic page content, handling form data, working with databases, and performing other tasks before sending the final HTML to the client.
+
+Server-side languages handle tasks that are executed on the web server, such as interacting with databases, managing sessions, and handling form submissions. These languages allow the server to create and send dynamic content to the client (browser) based on user interaction or other conditions.
+
+2. What are some examples of how PHP and JavaScript are alike and how they differ?
+Similarities:
+Both PHP and JavaScript are widely used in web development.
+Both can manipulate data, control logic, and interact with databases (JavaScript through Node.js and PHP natively).
+Both support variables, arrays, loops, and conditional statements.
+
+Differences:
+PHP is server-side, while JavaScript (in a traditional sense) is client-side. JavaScript interacts with the user interface in the browser, whereas PHP interacts with the server and databases.
+PHP executes on the server, generating HTML that is sent to the browser, while JavaScript runs directly in the browser after the page has been loaded.
+PHP doesn't handle front-end tasks like DOM manipulation, which JavaScript specializes in.
+
+3. Why pick PHP over another server-side scripting language?
+PHP is easy to learn, especially for beginners.
+It's open-source and has extensive community support and documentation.
+PHP is integrated with many databases and has strong database support, especially with MySQL.
+Many CMS platforms like WordPress, Drupal, and Joomla are built using PHP, making it popular in content-heavy websites.
+It has great compatibility with HTML and can be easily embedded within it.
+
+4. What’s the difference between the include and require keywords in PHP?
+include: If the file specified cannot be included, PHP will generate a warning, but the script will continue to execute.
+require: If the file specified cannot be included, PHP will generate a fatal error and halt execution of the script.
+
+What would happen if you tried to use a variable from a file that hasn’t been included yet? 
+If you try to use a variable from a file that hasn’t been included yet, PHP will throw an "undefined variable" error, as the variable will not exist in the current scope until the file is included.
+
+5. Compare and contrast echo and var_dump.
+echo is used to output one or more strings to the browser. It’s a simple output method, typically for displaying text or HTML.
+var_dump displays structured information about one or more variables, including their type and value. It’s primarily used for debugging, as it provides detailed output of variable contents, including arrays and objects.
+
